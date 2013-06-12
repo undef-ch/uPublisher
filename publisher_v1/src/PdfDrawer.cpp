@@ -34,7 +34,6 @@ void pdfDrawer::drawIntoPDF(ComponentContainer* container) {
 		Box* box = container->getComponent<Box>();
 		drawBox(box);
 
-
 		if(container->hasComponent<Text>()) {
 
 			Color col = color;
@@ -64,7 +63,7 @@ void pdfDrawer::drawText(Box* box, Text* text, Color fg) {
 	if(ofIsStringInString(fontName,".ttf")) pdf.setFont(ofToDataPath(fontName));
 	else pdf.setFont(fontName);
 
-	pdf.setTextAlignment((ofxLibharu::TEXT_ALIGNMENT)text->textAlignment);
+	pdf.setTextAlignment((ofxLibharu::TEXT_ALIGNMENT)text->textAlignment.get());
 	pdf.setFontSize(text->fontSize.getValueCalculated());
 	pdf.setTextLeading(text->leading.getValueCalculated());
 	pdf.setFillColor(fg.r,fg.g,fg.b);
@@ -100,16 +99,20 @@ void pdfDrawer::drawBox(Box* box) {
 	}
 
 	//
-	bool drawBorderTop = true, drawBorderLeft = true, drawBorderRight = true, drawBorderBottom = true;
-	float borderTopWidth=1, borderLeftWidth=1, borderBottomWidth=1, borderRightWidth=1;
+	bool drawBorderTop = false, drawBorderLeft = false, drawBorderRight = false, drawBorderBottom = false;
+	float borderTopWidth, borderLeftWidth, borderBottomWidth, borderRightWidth;
 
 	BoxDefinition* boxDef;
 	if(box->components->hasComponent<BoxDefinition>()) {
 		boxDef = box->components->getComponent<BoxDefinition>();
 		if(boxDef->border.top.getType()==Unit::Type_None) drawBorderTop = false;
+		else drawBorderTop = true;
 		if(boxDef->border.left.getType()==Unit::Type_None) drawBorderLeft = false;
+		else drawBorderLeft = true;
 		if(boxDef->border.right.getType()==Unit::Type_None) drawBorderRight = false;
+		else drawBorderRight = true;
 		if(boxDef->border.bottom.getType()==Unit::Type_None) drawBorderBottom = false;
+		else drawBorderBottom = true;
 
 		borderTopWidth = boxDef->border.top.getValueCalculated();
 		borderLeftWidth = boxDef->border.left.getValueCalculated();
@@ -123,7 +126,6 @@ void pdfDrawer::drawBox(Box* box) {
 
 	ofRectangle rect(box->getGlobalPosition().x+borderLeftWidth*.5,box->getGlobalPosition().y+borderTopWidth*.5,
 	                 box->size.x-borderRightWidth*.5-borderLeftWidth*.5, box->size.y-borderBottomWidth*.5-borderTopWidth*.5);
-	//---> lineWidth
 	if(drawBorderTop) {
 		pdf.setLineWidth(borderTopWidth);
 		pdf.drawLine(rect.getTopLeft().x-borderLeftWidth*.5,rect.getTopLeft().y,rect.getTopRight().x+borderRightWidth*.5,rect.getTopRight().y);

@@ -44,7 +44,10 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
+	ofPushMatrix();
+	ofScale(2,2);
 	debugDrawer.draw(&root);
+	ofPopMatrix();
 	
 	ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate()), 30, 30);
 

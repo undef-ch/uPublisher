@@ -12,6 +12,7 @@
     <File Name="../src/testApp.h"/>
     <File Name="../src/main.cpp"/>
     <File Name="../src/PdfDrawer.h"/>
+    <File Name="../src/PdfDrawer.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="config">
     <File Name="../Makefile"/>
@@ -40,7 +41,6 @@
           <File Name="../../../../addons/ofxBoxModel/src/components/Style.cpp"/>
           <File Name="../../../../addons/ofxBoxModel/src/components/Text.cpp"/>
           <File Name="../../../../addons/ofxBoxModel/src/components/Text.h"/>
-          <File Name="../src/PdfDrawer.cpp"/>
         </VirtualDirectory>
         <File Name="../../../../addons/ofxBoxModel/src/ofxBox.h"/>
         <VirtualDirectory Name="core">

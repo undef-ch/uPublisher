@@ -6,17 +6,17 @@
 	word-spacing: .2;
 	color: #fff;
 	font-name: SimLt___D.ttf;
-	text-align: justify;
+	text-align: right;
+	text-transform: uppercase;
 
 	float: left;
 	width: 100;
 	height: auto;
 	background-color: #fff;
 	border-color: #000;
-	border: none;
-	border-right: 2;
-	padding-right: 4;
-	padding-left:2;
+	border-right: 3;
+	margin:2;
+	padding:2;
 	color: #000;
 	
 }
@@ -27,9 +27,11 @@
 	font-size: 2px;
 	width: 3px;
 	height: 4px;
-	
 	float: left;
 	color: #ggg;	
+	border: .1;
+	margin-left:-.1;
+	margin-bottom:-.1;
 }
 
 /* this is a comment */
