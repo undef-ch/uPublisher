@@ -1,0 +1,40 @@
+.outerBox{
+	
+	font-size: 3;
+	leading: 4;
+	letter-spacing: .5;
+	word-spacing: .2;
+	color: #fff;
+	font-name: SimLt___D.ttf;
+	text-align: justify;
+
+	float: left;
+	width: 100;
+	height: auto;
+	background-color: #fff;
+	border-color: #000;
+	border: none;
+	border-right: 2;
+	padding-right: 4;
+	padding-left:2;
+	color: #000;
+	
+}
+
+.innerBox{
+	background-color: none;
+	position: relative;
+	font-size: 2px;
+	width: 3px;
+	height: 4px;
+	
+	float: left;
+	color: #ggg;	
+}
+
+/* this is a comment */
+#root{
+	background-color: #fff;
+	color: #444;
+	border: none;
+}
