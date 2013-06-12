@@ -41,6 +41,7 @@
           <File Name="../../../../addons/ofxBoxModel/src/components/Text.cpp"/>
           <File Name="../../../../addons/ofxBoxModel/src/components/Text.h"/>
           <File Name="../src/PdfDrawer.cpp"/>
+          <File Name="../../../../addons/ofxBoxModel/src/components/Layouter.cpp"/>
         </VirtualDirectory>
         <File Name="../../../../addons/ofxBoxModel/src/ofxBox.h"/>
         <VirtualDirectory Name="core">
@@ -199,7 +200,7 @@
       </Compiler>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="" IntermediateDirectory="./Debug" Command="./$(ProjectName)_debug" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(WorkspacePath)/../bin" PauseExecWhenProcTerminates="yes"/>
+      <General OutputFile="" IntermediateDirectory="./Debug" Command="./bin/$(ProjectName)_debug" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(WorkspacePath)/.." PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>

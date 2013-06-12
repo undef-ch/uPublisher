@@ -6,6 +6,9 @@
 #include "debug/DebugDrawer.h"
 #include "components/Text.h"
 
+using namespace boxModel::core;
+
+
 class TextBox: public ofxBox, public Text{
 public:
 	TextBox(){

@@ -5,7 +5,7 @@
 	letter-spacing: .5;
 	word-spacing: .2;
 	color: #fff;
-	font-name: SimLt___D.ttf;
+	font-name: DejaVuSansMono.ttf;
 	text-align: justify;
 
 	float: left;
@@ -27,7 +27,6 @@
 	font-size: 2px;
 	width: 3px;
 	height: 4px;
-	
 	float: left;
 	color: #ggg;	
 }
