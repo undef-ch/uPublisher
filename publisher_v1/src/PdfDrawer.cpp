@@ -1,10 +1,12 @@
 #include "PdfDrawer.h"
 
+using namespace boxModel::components;
+using namespace boxModel::core;
 
 pdfDrawer::pdfDrawer() {
 
 	pdf.setup();
-	Text::onGetTextBoxHeight.connect<pdfDrawer,&pdfDrawer::onGetBoxHeight>(this);
+	//Text::onGetTextBoxHeight.connect<pdfDrawer,&pdfDrawer::onGetBoxHeight>(this);
 	color = Color(0);
 }
 
@@ -26,7 +28,6 @@ void pdfDrawer::savePDF(string path,ComponentContainer* container) {
 	pdf.save(path, true);
 	pdf.openLastSave();
 }
-
 
 void pdfDrawer::drawIntoPDF(ComponentContainer* container) {
 
@@ -56,22 +57,12 @@ void pdfDrawer::drawIntoPDF(ComponentContainer* container) {
 }
 
 void pdfDrawer::drawText(Box* box, Text* text, Color fg) {
-
 	Point pos = box->getGlobalPosition() + box->contentPosition;
-
-	string fontName = text->fontName.get();
-	if(ofIsStringInString(fontName,".ttf")) pdf.setFont(ofToDataPath(fontName));
-	else pdf.setFont(fontName);
-
-	pdf.setTextAlignment((ofxLibharu::TEXT_ALIGNMENT)text->textAlignment.get());
-	pdf.setFontSize(text->fontSize.getValueCalculated());
-	pdf.setTextLeading(text->leading.getValueCalculated());
-	pdf.setFillColor(fg.r,fg.g,fg.b);
-	pdf.setCharSpacing(text->letterSpacing.getValueCalculated());
-	pdf.setWordSpacing(text->wordSpacing.getValueCalculated());
-
-	pdf.drawTextBox(text->text, pos.x, pos.y, box->contentSize.x,box->contentSize.y);
-
+	pdf.pushMatrix();
+	pdf.translate(pos.x, pos.y);
+	pdf.setFillColor(fg.r, fg.g, fg.b);
+	text->getTextBlock().draw(this);
+	pdf.popMatrix();
 }
 
 void pdfDrawer::drawBox(Box* box) {
@@ -149,14 +140,22 @@ void pdfDrawer::drawBox(Box* box) {
 	*/
 }
 
-void pdfDrawer::onGetBoxHeight(float& height, Text* info) {
-	Box* box = info->components->getComponent<Box>();
-
-	//cout << box->contentSize.x << " " << " " << info->fontName.get() << " " << info->fontSize << " " << info->leading<< " " << info->letterSpacing << " " << info->wordSpacing << endl;
-
-	string fontName = info->fontName;
-	if(ofIsStringInString(fontName,".ttf")) fontName = ofToDataPath(info->fontName);
-
-	height = pdf.getTextBoxHeight(box->contentSize.x, info->text, fontName, info->fontSize, info->leading, info->letterSpacing, info->wordSpacing);
-
+void pdfDrawer::setFont(cppFont::Font* font, int fontSize){
+	pdf.setFont(font->filePath);
+	pdf.setFontSize(fontSize*1.4);
 }
+
+void pdfDrawer::drawCharacter(cppFont::Letter& letter){
+	string s = "";
+	s+=letter.character;
+	pdf.drawText(s, letter.x, letter.y + letter.size*.065 );
+}
+
+void pdfDrawer::drawRect(float x, float y, float width, float height){
+	pdf.drawRectangle(x,y,width,height);
+}
+
+void pdfDrawer::drawLine(float x, float y, float x2, float y2){
+	pdf.drawLine(x,y,x2,y2);
+}
+

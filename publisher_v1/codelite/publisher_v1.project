@@ -5,14 +5,155 @@
       <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
     </Plugin>
   </Plugins>
+  <VirtualDirectory Name="cppFont">
+    <VirtualDirectory Name="ofExample">
+      <VirtualDirectory Name="bin">
+        <VirtualDirectory Name="data">
+          <VirtualDirectory Name="hyphenate">
+            <File Name="../../../../addons/cppFont/ofExample/bin/data/hyphenate/de"/>
+            <File Name="../../../../addons/cppFont/ofExample/bin/data/hyphenate/fr"/>
+            <File Name="../../../../addons/cppFont/ofExample/bin/data/hyphenate/es"/>
+            <File Name="../../../../addons/cppFont/ofExample/bin/data/hyphenate/de-DE-1901"/>
+            <File Name="../../../../addons/cppFont/ofExample/bin/data/hyphenate/en"/>
+            <File Name="../../../../addons/cppFont/ofExample/bin/data/hyphenate/de-1901"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <File Name="../../../../addons/cppFont/ofExample/bin/ofExample_debug"/>
+        <File Name="../../../../addons/cppFont/ofExample/bin/ofExample"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="src">
+        <File Name="../../../../addons/cppFont/ofExample/src/testApp.cpp"/>
+        <File Name="../../../../addons/cppFont/ofExample/src/ofTextBlockDrawer.cpp"/>
+        <File Name="../../../../addons/cppFont/ofExample/src/testApp.h"/>
+        <File Name="../../../../addons/cppFont/ofExample/src/ofTextBlockDrawer.h"/>
+        <File Name="../../../../addons/cppFont/ofExample/src/main.cpp"/>
+      </VirtualDirectory>
+      <File Name="../../../../addons/cppFont/ofExample/Makefile"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="libs">
+      <VirtualDirectory Name="libhyphenate">
+        <VirtualDirectory Name="include">
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/include/Hyphenator.h"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/include/hyphenate.h"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/include/HyphenationTree.h"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/include/Language.h"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/include/HyphenationRule.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="src">
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/src/hyphenate.cpp"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/src/Hyphenator.cpp"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/src/HyphenationTree.cpp"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/src/Language.cpp"/>
+          <File Name="../../../../addons/cppFont/libs/libhyphenate/src/HyphenationRule.cpp"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="utf8">
+        <VirtualDirectory Name="utf8">
+          <File Name="../../../../addons/cppFont/libs/utf8/utf8/core.h"/>
+          <File Name="../../../../addons/cppFont/libs/utf8/utf8/unchecked.h"/>
+          <File Name="../../../../addons/cppFont/libs/utf8/utf8/checked.h"/>
+        </VirtualDirectory>
+        <File Name="../../../../addons/cppFont/libs/utf8/utf8.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ofLibharuExample">
+      <VirtualDirectory Name="bin">
+        <File Name="../../../../addons/cppFont/ofLibharuExample/bin/ofLibharuExample_debug"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/bin/ofLibharuExample"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="src">
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/libharuTextBlockDrawer.cpp"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/testApp.cpp"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/ofTextBlockDrawer.cpp"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/testApp.h"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/libharuTextBlockDrawer.h"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/ofTextBlockDrawer.h"/>
+        <File Name="../../../../addons/cppFont/ofLibharuExample/src/main.cpp"/>
+      </VirtualDirectory>
+      <File Name="../../../../addons/cppFont/ofLibharuExample/Makefile"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="src">
+      <File Name="../../../../addons/cppFont/src/TextBlock.cpp"/>
+      <File Name="../../../../addons/cppFont/src/TextBlockDrawer.cpp"/>
+      <File Name="../../../../addons/cppFont/src/Types.h"/>
+      <File Name="../../../../addons/cppFont/src/TextBlockDrawer.h"/>
+      <File Name="../../../../addons/cppFont/src/TextBlock.h"/>
+      <File Name="../../../../addons/cppFont/src/Font.cpp"/>
+      <File Name="../../../../addons/cppFont/src/Types.cpp"/>
+      <File Name="../../../../addons/cppFont/src/Font.h"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="ofxBoxModel">
+    <VirtualDirectory Name="src">
+      <VirtualDirectory Name="debug">
+        <File Name="../../../../addons/ofxBoxModel/src/debug/Print.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/debug/DebugDrawer.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/debug/DebugDrawer.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/debug/Print.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="core">
+        <File Name="../../../../addons/ofxBoxModel/src/core/Unit.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Utils.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Component.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Utils.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Composite.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Component.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Composite.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/BaseTypes.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="tools">
+        <File Name="../../../../addons/ofxBoxModel/src/tools/Instancer.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/tools/Instancer.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/tools/Xml.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/tools/Xml.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="components">
+        <File Name="../../../../addons/ofxBoxModel/src/components/Text.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Text.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Stack.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Linker.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Box.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Style.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/BoxDefinition.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Css.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Layouter.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Style.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Serializer.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Box.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/BoxDefinition.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Linker.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Addressable.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Serializer.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Layouter.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Css.cpp"/>
+      </VirtualDirectory>
+      <File Name="../../../../addons/ofxBoxModel/src/ofxBox.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="libs">
+      <VirtualDirectory Name="nano-signal-slot">
+        <VirtualDirectory Name="include">
+          <File Name="../../../../addons/ofxBoxModel/libs/nano-signal-slot/include/nano_signal_slot.hpp"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="pugixml">
+        <VirtualDirectory Name="include">
+          <File Name="../../../../addons/ofxBoxModel/libs/pugixml/include/pugixml.hpp"/>
+          <File Name="../../../../addons/ofxBoxModel/libs/pugixml/include/pugiconfig.hpp"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="src">
+          <File Name="../../../../addons/ofxBoxModel/libs/pugixml/src/pugixml.cpp"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+    </VirtualDirectory>
+  </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
     <File Name="../src/testApp.cpp"/>
     <File Name="../src/testApp.h"/>
     <File Name="../src/main.cpp"/>
-    <File Name="../src/PdfDrawer.cpp"/>
     <File Name="../src/PdfDrawer.h"/>
+    <File Name="../src/PdfDrawer.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="config">
     <File Name="../Makefile"/>
@@ -20,60 +161,6 @@
     <File Name="../addons.make"/>
   </VirtualDirectory>
   <VirtualDirectory Name="addons">
-    <VirtualDirectory Name="ofxBoxModel">
-      <VirtualDirectory Name="src">
-        <VirtualDirectory Name="debug">
-          <File Name="../../../../addons/ofxBoxModel/src/debug/DebugDrawer.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/debug/DebugDrawer.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/debug/Print.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/debug/Print.h"/>
-        </VirtualDirectory>
-        <VirtualDirectory Name="components">
-          <File Name="../../../../addons/ofxBoxModel/src/components/Addressable.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Box.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Css.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Layouter.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Css.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/BoxDefinition.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Stack.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/BoxDefinition.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Style.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Style.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Text.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Text.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/components/Layouter.cpp"/>
-        </VirtualDirectory>
-        <File Name="../../../../addons/ofxBoxModel/src/ofxBox.h"/>
-        <VirtualDirectory Name="core">
-          <File Name="../../../../addons/ofxBoxModel/src/core/Box.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/BaseTypes.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Utils.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Utils.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Box.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Composite.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Composite.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Component.cpp"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Unit.h"/>
-          <File Name="../../../../addons/ofxBoxModel/src/core/Component.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="libs">
-        <VirtualDirectory Name="nano-signal-slot">
-          <VirtualDirectory Name="include">
-            <File Name="../../../../addons/ofxBoxModel/libs/nano-signal-slot/include/nano_signal_slot.hpp"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
-        <VirtualDirectory Name="pugixml">
-          <VirtualDirectory Name="include">
-            <File Name="../../../../addons/ofxBoxModel/libs/pugixml/include/pugixml.hpp"/>
-            <File Name="../../../../addons/ofxBoxModel/libs/pugixml/include/pugiconfig.hpp"/>
-          </VirtualDirectory>
-          <VirtualDirectory Name="src">
-            <File Name="../../../../addons/ofxBoxModel/libs/pugixml/src/pugixml.cpp"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
-      </VirtualDirectory>
-    </VirtualDirectory>
     <VirtualDirectory Name="ofxLibharu">
       <VirtualDirectory Name="src">
         <File Name="../../../../addons/ofxLibharu/src/ofxLibharuErrors.h"/>
@@ -183,6 +270,8 @@
   </VirtualDirectory>
   <VirtualDirectory Name="data">
     <File Name="../bin/data/style.css"/>
+    <File Name="../bin/data/content.xml"/>
+    <File Name="../bin/data/template.xml"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">
     <GlobalSettings>
@@ -205,6 +294,7 @@
         <![CDATA[]]>
       </Environment>
       <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <DebuggerSearchPaths/>
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>
@@ -224,7 +314,7 @@
         <CustomPostBuild/>
         <CustomPreBuild/>
       </AdditionalRules>
-      <Completion EnableCpp11="no">
+      <Completion EnableCpp11="yes">
         <ClangCmpFlagsC/>
         <ClangCmpFlags/>
         <ClangPP/>
@@ -242,6 +332,7 @@
         <![CDATA[]]>
       </Environment>
       <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <DebuggerSearchPaths/>
         <PostConnectCommands/>
         <StartupCommands/>
       </Debugger>

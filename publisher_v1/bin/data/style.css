@@ -1,42 +1,17 @@
-.outerBox{
-	
-	font-size: 3;
-	leading: 4;
-	letter-spacing: .5;
-	word-spacing: .2;
-	color: #fff;
-	font-name: DejaVuSansMono.ttf;
-	text-align: right;
-	text-transform: uppercase;
+.page{
+	width: 210;
+	height: 297;
+	padding: 5;
+}
 
-	float: left;
-	width: 100;
-	height: auto;
-	background-color: #fff;
-	border-color: #000;
-	border-right: 3;
-	margin:2;
-	padding:2;
+h1{
+	font-size: 12;
+	background-color: #ff00ff;
 	color: #000;
-	
+	font: miso-regular.ttf;
+	width: auto;
 }
 
-.innerBox{
-	background-color: none;
-	position: relative;
-	font-size: 2px;
-	width: 3px;
-	height: 4px;
-	float: left;
-	color: #ggg;	
-	border: .1;
-	margin-left:-.1;
-	margin-bottom:-.1;
-}
-
-/* this is a comment */
-#root{
-	background-color: #fff;
-	color: #444;
-	border: none;
+p{
+	font-size: 6;
 }

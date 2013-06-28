@@ -5,14 +5,30 @@
 #include "PdfDrawer.h"
 #include "debug/DebugDrawer.h"
 #include "components/Text.h"
+#include "tools/Instancer.h"
+#include "tools/Xml.h"
 
-using namespace boxModel::core;
 
-
-class TextBox: public ofxBox, public Text{
+class TextBox: public ofxBox, public boxModel::components::Text{
 public:
 	TextBox(){
 		addComponent<Text>(this);
+		width = boxModel::core::Unit::Percent;
+		width = 100;
+	}
+	
+	virtual string getType(){
+		return "p";
+	}
+};
+
+class H1: public TextBox{
+public:
+	H1(){
+	}
+	
+	string getType(){
+		return "h1";
 	}
 };
 
@@ -22,7 +38,7 @@ class testApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
-
+		
 		void keyPressed  (int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
@@ -33,8 +49,7 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-		ofxBox root;
+		ofxBox* root;
 		pdfDrawer pdf;
 		boxModel::debug::DebugDrawer debugDrawer;
-		
 };
