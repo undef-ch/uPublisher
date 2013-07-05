@@ -7,6 +7,7 @@
 #include "components/Text.h"
 #include "tools/Instancer.h"
 #include "tools/Xml.h"
+#include "tools/Templater.h"
 
 
 class TextBox: public ofxBox, public boxModel::components::Text{
@@ -49,7 +50,11 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-		ofxBox* root;
+		ofxBox root;
+		std::vector<ofxBox*> pages;
 		pdfDrawer pdf;
 		boxModel::debug::DebugDrawer debugDrawer;
+		
+		boxModel::tools::Templater templater;
+		
 };

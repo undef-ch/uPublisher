@@ -13,7 +13,9 @@ public:
 	pdfDrawer();
 	~pdfDrawer();
 	
-	void savePDF(string path, boxModel::core::ComponentContainer* container);
+	void savePDF(string path, ofxBox* container);
+	void savePDF(string path, std::vector<ofxBox*> containers);
+
 	void drawIntoPDF(boxModel::core::ComponentContainer* container);
 	
 	void drawBox(boxModel::components::Box* box);
@@ -29,6 +31,9 @@ public:
 	void drawCharacter(cppFont::Letter& letter);
 	void drawRect(float x, float y, float width, float height);
 	void drawLine(float x, float y, float x2, float y2);
+
+private:
+	ofVec2f curTextOffset;
 };
 
 #endif // PDFDRAWER_H

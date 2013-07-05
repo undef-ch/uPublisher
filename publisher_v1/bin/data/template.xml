@@ -1,3 +1,5 @@
-<box class="page">
-	
+<box class="page" css="contentStyle.css">
+	<box id="column1" class="column" linkTo="#column2"/>
+	<box id="column2" class="column" />
+	<box id="footer"><p /></box>
 </box>

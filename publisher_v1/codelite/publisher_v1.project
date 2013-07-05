@@ -100,12 +100,16 @@
         <File Name="../../../../addons/ofxBoxModel/src/core/Component.h"/>
         <File Name="../../../../addons/ofxBoxModel/src/core/Composite.cpp"/>
         <File Name="../../../../addons/ofxBoxModel/src/core/BaseTypes.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Globals.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/core/Globals.cpp"/>
       </VirtualDirectory>
       <VirtualDirectory Name="tools">
         <File Name="../../../../addons/ofxBoxModel/src/tools/Instancer.cpp"/>
         <File Name="../../../../addons/ofxBoxModel/src/tools/Instancer.h"/>
         <File Name="../../../../addons/ofxBoxModel/src/tools/Xml.h"/>
         <File Name="../../../../addons/ofxBoxModel/src/tools/Xml.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/tools/Templater.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/tools/Templater.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="components">
         <File Name="../../../../addons/ofxBoxModel/src/components/Text.h"/>
@@ -126,6 +130,9 @@
         <File Name="../../../../addons/ofxBoxModel/src/components/Serializer.h"/>
         <File Name="../../../../addons/ofxBoxModel/src/components/Layouter.cpp"/>
         <File Name="../../../../addons/ofxBoxModel/src/components/Css.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Addressable.cpp"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Splitter.h"/>
+        <File Name="../../../../addons/ofxBoxModel/src/components/Splitter.cpp"/>
       </VirtualDirectory>
       <File Name="../../../../addons/ofxBoxModel/src/ofxBox.h"/>
     </VirtualDirectory>
@@ -269,9 +276,10 @@
     </VirtualDirectory>
   </VirtualDirectory>
   <VirtualDirectory Name="data">
-    <File Name="../bin/data/style.css"/>
     <File Name="../bin/data/content.xml"/>
     <File Name="../bin/data/template.xml"/>
+    <File Name="../bin/data/contentStyle.css"/>
+    <File Name="../bin/data/appStyle.css"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">
     <GlobalSettings>

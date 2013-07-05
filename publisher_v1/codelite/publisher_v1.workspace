@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeLite_Workspace Name="publisher_v1" Database="./publisher_v1.tags">
-  <Environment>
-    <![CDATA[
-  
-  
-  ]]>
-  </Environment>
   <Project Name="publisher_v1" Path="publisher_v1.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
@@ -17,4 +11,7 @@
       <Project Name="publisher_v1" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
+  <Environment>
+    <![CDATA[]]>
+  </Environment>
 </CodeLite_Workspace>

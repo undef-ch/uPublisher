@@ -4,8 +4,6 @@ using namespace boxModel::components;
 using namespace boxModel::core;
 
 pdfDrawer::pdfDrawer() {
-
-	pdf.setup();
 	//Text::onGetTextBoxHeight.connect<pdfDrawer,&pdfDrawer::onGetBoxHeight>(this);
 	color = Color(0);
 }
@@ -13,18 +11,28 @@ pdfDrawer::pdfDrawer() {
 pdfDrawer::~pdfDrawer() {
 }
 
-void pdfDrawer::savePDF(string path,ComponentContainer* container) {
+void pdfDrawer::savePDF(string path, ofxBox* containers) {
+	std::vector<ofxBox*> comps;
+	comps.push_back(containers);
+	savePDF(path, comps);
+}
 
-	if(!container->hasComponent<Box>()) return;
-
-	Box* b = container->getComponent<Box>();
-	pdf.setPageSize(b->size.x,b->size.y);
-
-	pdf.setFillType(OF_OUTLINE);
-	pdf.setLineWidth(.1);
-
-	drawIntoPDF(container);
-
+void pdfDrawer::savePDF(string path, std::vector<ofxBox*> containers) {
+	pdf.setup();
+	for(ofxBox* comp:containers){
+		if(comp->hasComponent<Box>()){
+			Box* b = comp->getComponent<Box>();
+			pdf.setPageSize(b->size.x, b->size.y);
+		}
+		pdf.setFillType(OF_OUTLINE);
+		pdf.setLineWidth(.1);
+		
+		drawIntoPDF(comp);
+		if(comp != containers.back()){
+			pdf.newPage(210, 297);
+		}
+	}
+	
 	pdf.save(path, true);
 	pdf.openLastSave();
 }
@@ -57,16 +65,20 @@ void pdfDrawer::drawIntoPDF(ComponentContainer* container) {
 }
 
 void pdfDrawer::drawText(Box* box, Text* text, Color fg) {
+	
 	Point pos = box->getGlobalPosition() + box->contentPosition;
-	pdf.pushMatrix();
-	pdf.translate(pos.x, pos.y);
+	curTextOffset.set(pos.x, pos.y);
+	//pdf.pushMatrix();
+	//pdf.translate(pos.x, pos.y);
 	pdf.setFillColor(fg.r, fg.g, fg.b);
+	pdf.beginText();
 	text->getTextBlock().draw(this);
-	pdf.popMatrix();
+	pdf.endText();
+	//pdf.popMatrix();
 }
 
 void pdfDrawer::drawBox(Box* box) {
-
+	
 	//
 	Style* style;
 	if(box->components->hasComponent<Style>()) {
@@ -146,9 +158,11 @@ void pdfDrawer::setFont(cppFont::Font* font, int fontSize){
 }
 
 void pdfDrawer::drawCharacter(cppFont::Letter& letter){
-	string s = "";
-	s+=letter.character;
-	pdf.drawText(s, letter.x, letter.y + letter.size*.065 );
+	
+	//std::string str = "";
+	//str += letter.character;
+	//pdf.drawText(str, letter.x, letter.y);
+	pdf.drawChar(letter.character, letter.x + curTextOffset.x, (letter.y + letter.size*.065) + curTextOffset.y);
 }
 
 void pdfDrawer::drawRect(float x, float y, float width, float height){
