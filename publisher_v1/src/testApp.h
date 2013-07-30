@@ -9,7 +9,6 @@
 #include "tools/Xml.h"
 #include "tools/Templater.h"
 
-
 class TextBox: public ofxBox, public boxModel::components::Text{
 public:
 	TextBox(){

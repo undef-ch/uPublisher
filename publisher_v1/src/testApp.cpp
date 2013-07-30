@@ -33,6 +33,7 @@ void testApp::setup() {
 	pages = templater.loadContent<ofxBox>("content.xml", "#column1");
 	
 	//CREATE INDEX
+	/*
 	int curPage = 0;
 	std::vector<headerPos> headersPos;
 	for(ofxBox* box: pages) {
@@ -53,13 +54,16 @@ void testApp::setup() {
 	indexPage->addClass("index");
 	indexPage->loadCss("contentStyle.css");
 	
+	
 	for(headerPos hp:headersPos){
 		H1* header = new H1();
 		header->text =  ofToString(hp.pageNumber+2) + "           " + hp.text ;
 		indexPage->addChild(header);
+		delete header;
 	}
 	
 	indexPage->flush();
+	*/
 	//end index
 	
 	int pageNumber = 2;
@@ -70,7 +74,7 @@ void testApp::setup() {
 		pageNumber++;
 	}
 	
-	pages.insert(pages.begin(), indexPage);
+	//pages.insert(pages.begin(), indexPage);
 
 	pdf.savePDF("test.pdf", pages);
 
@@ -80,8 +84,9 @@ void testApp::setup() {
 	
 	root.width = Unit::Pixel;
 	root.width = ofGetWidth();
+	root.height = Unit::Pixel;
 	root.height = ofGetHeight();
-
+	
 	root.flush();
 }
 

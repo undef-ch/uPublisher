@@ -1,14 +1,13 @@
-<h1>wichtig</h1>
-
-<p>Dieser Text wird umgebrochen. Darum benötigen wir so lange Wörter wie nur möglich um so den Textfluss zu kontrollieren. Dieser Text wird umgebrochen. Darum benötigen wir so lange Wörter wie nur möglich um so den Textfluss zu kontrollieren. Dieser Text wird umgebrochen. Darum benötigen wir so lange Wörter wie nur möglich um so den Textfluss zu kontrollieren. Dieser Text wird umgebrochen. Darum benötigen wir so lange Wörter wie nur möglich um so den Textfluss zu kontrollieren. Dieser Text wird umgebrochen. Darum benötigen wir so lange Wörter wie nur möglich um so den Textfluss zu kontrollieren. Dieser Text wird umgebrochen. Dazwischen kommt dann noch was anderes. Ein superduperlanges Wort. Darum benötigen wir so lange Wörter wie nur möglich um so den Textfluss zu kontrollieren.
-</p>
+<h1>C++</h1>
+<p>Bjarne Stroustrup, a Danish and British trained computer scientist, began his work on "C with Classes" in 1979.[4] The idea of creating a new language originated from Stroustrup's experience in programming for his Ph.D. thesis. Stroustrup found that Simula had features that were very helpful for large software development, but the language was too slow for practical use, while BCPL was fast but too low-level to be suitable for large software development. When Stroustrup started working in AT&T Bell Labs, he had the problem of analyzing the UNIX kernel with respect to distributed computing. Remembering his Ph.D. experience, Stroustrup set out to enhance the C language with Simula-like features. C was chosen because it was general-purpose, fast, portable and widely used. Besides C and Simula, some other languages that inspired him were ALGOL 68, Ada, CLU and ML. At first, the class, derived class, strong typing, inlining, and default argument features were added to C via Stroustrup's "C with Classes" to C compiler, Cpre.[10] It is possible to write object oriented or procedural code in the same program in C++. This has caused some concern that some C++ programmers are still writing procedural code, but are under the impression that it is object oriented, simply because they are using C++. Often it is an amalgamation of the two. This usually causes most problems when the code is revisited or the task is taken over by another coder.[14] C++ continues to be used and is one of the preferred programming languages to develop professional applications. [15]According to Stroustrup: "the name signifies the evolutionary nature of the changes from C".[16] During C++'s development period, the language had been.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel rhoncus diam. Vestibulum suscipit odio a lacus dignissim,
 non semper nisl luctus. Maecenas nec nulla tempor, feugiat magna et, egestas augue. Aliquam erat volutpat. Quisque faucibus, 
-velit in fermentum commodo, dui ipsum aliquam quam, vel iaculis erat neque et mi. Nunc in urna dapibus, blandit turpis at, sodales leo. 
+velit in fermentum commodo, dui ipsum aliquam quam, vel iaculis erat neque et mi. Nunc in urna dapibus, blandit turpis at, sodales leo.</p><p>
 Etiam ultrices pellentesque nibh, vitae vestibulum turpis interdum eleifend. 
 Proin a tellus pharetra, porttitor eros ac, viverra dui. Sed nisl odio, pharetra in ante sit amet, molestie dictum diam.
 </p>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel rhoncus diam. Vestibulum suscipit odio a lacus dignissim,
 non semper nisl luctus. Maecenas nec nulla tempor, feugiat magna et, egestas augue. Aliquam erat volutpat. Quisque faucibus, 
 velit in fermentum commodo, dui ipsum aliquam quam, vel iaculis erat neque et mi. Nunc in urna dapibus, blandit turpis at, sodales leo. 
@@ -147,3 +146,4 @@ velit in fermentum commodo, dui ipsum aliquam quam, vel iaculis erat neque et mi
 Etiam ultrices pellentesque nibh, vitae vestibulum turpis interdum eleifend. 
 Proin a tellus pharetra, porttitor eros ac, viverra dui. Sed nisl odio, pharetra in ante sit amet, molestie dictum diam.
 </p>
+-->

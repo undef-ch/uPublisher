@@ -1,6 +1,6 @@
 .page{
-	width: 210;
-	height: 297;
+	height: 210;
+	width: 297;
 	padding: 20px;
 }
 
@@ -28,6 +28,8 @@ h1{
 p{
 	font-size: 3;
 	line-height: 6;
+	background-color: #efefef;
+	margin-bottom: 1px;
 }
 
 .page{

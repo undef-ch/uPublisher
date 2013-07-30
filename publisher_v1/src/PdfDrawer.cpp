@@ -38,7 +38,10 @@ void pdfDrawer::savePDF(string path, std::vector<ofxBox*> containers) {
 }
 
 void pdfDrawer::drawIntoPDF(ComponentContainer* container) {
-
+	if(container->hasComponent<Splitter>()){
+		if(container->getComponent<Splitter>()->isSplitted())
+			return;
+	}
 	if(container->hasComponent<Box>()) {
 		Box* box = container->getComponent<Box>();
 		drawBox(box);
@@ -72,7 +75,7 @@ void pdfDrawer::drawText(Box* box, Text* text, Color fg) {
 	//pdf.translate(pos.x, pos.y);
 	pdf.setFillColor(fg.r, fg.g, fg.b);
 	pdf.beginText();
-	text->getTextBlock().draw(this);
+	text->getTextBlock()->draw(this);
 	pdf.endText();
 	//pdf.popMatrix();
 }
